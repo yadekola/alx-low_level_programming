@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - This is the entry point of every C program
+ * main - print a line of code using puts
+ *
  * Return: (0)
  */
 int main(void)
