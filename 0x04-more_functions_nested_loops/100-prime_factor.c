@@ -1,28 +1,27 @@
 #include <stdio.h>
-#include <math.h>
 
 /**
-* main - finds the largest prime
-* Author - Chinweike Okwuduche
-* Return: 0 if no errors
+* main - checks prime factors
+* Return: Always 0
 */
 
 int main(void)
 {
-	unsigned long i = 2;
-	unsigned long biggest = 0;
-	unsigned long num = 612852475143;
+	long int number, x;
 
-	while (num > i)
+	number = 612852475143;
+
+	for (x = 2; x <= number; x++)
 	{
-		while (num % i == 0)
+		if (number % x == 0)
 		{
-			if (i > biggest)
-				biggest = i;
-			num = num / i;
+			number /= x;
+
+			x--;
 		}
-		i++;
 	}
-	printf("%lu\n", biggest);
+
+	printf("%ld\n", x);
+
 	return (0);
 }
